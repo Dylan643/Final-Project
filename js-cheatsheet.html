@@ -1,0 +1,143 @@
+<!DOCTYPE html> <!-- Declares this document uses HTML5 -->
+<html lang="en"> <!-- Root HTML element with English language -->
+
+<head> <!-- Head contains metadata and links -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes layout responsive on all screen sizes -->
+  <title>JavaScript Cheat Sheet</title> <!-- Title shown in browser tab -->
+  <link rel="stylesheet" href="styles.css"> <!-- Links to external CSS file -->
+
+  <style>
+    /* Inline CSS styling for collapsible elements and dark mode */
+    details {
+      margin-bottom: 15px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    details[open] {
+      background: #e0eafc;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode details {
+      background: #2e2e2e;
+    }
+
+    .dark-mode details[open] {
+      background: #444;
+    }
+
+    .dark-mode pre {
+      background: #111;
+      color: #9f9;
+    }
+
+    #toggle-mode {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      padding: 10px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+
+<body> <!-- Visible content of the page -->
+
+  <!-- Toggle Button for Dark Mode -->
+  <button id="toggle-mode">Toggle Dark Mode</button>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="html-cheatsheet.html">HTML Cheat Sheet</a>
+    <a href="css-cheatsheet.html">CSS Cheat Sheet</a>
+    <a href="js-cheatsheet.html" class="active">JavaScript Cheat Sheet</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="cheatsheet">
+    <section>
+      <h1>JavaScript Cheat Sheet</h1>
+      <p>This page shows the most useful JavaScript tags in beginner-friendly terms.</p>
+
+      <!-- JavaScript Tag Explanations -->
+      <details><summary>let / const / var</summary><p>Declare variables.</p><pre><code>let x = 5;
+const y = 10;
+var z = 15;</code></pre></details>
+
+      <details><summary>function</summary><p>Defines a reusable block of code.</p><pre><code>function greet() {
+  alert("Hello!");
+}</code></pre></details>
+
+      <details><summary>if / else</summary><p>Conditional logic.</p><pre><code>if (x > 10) {
+  console.log("Big");
+} else {
+  console.log("Small");
+}</code></pre></details>
+
+      <details><summary>for / while</summary><p>Loops for repetition.</p><pre><code>for (let i = 0; i < 5; i++) {
+  console.log(i);
+}</code></pre></details>
+
+      <details><summary>getElementById</summary><p>Selects a DOM element.</p><pre><code>document.getElementById("demo").textContent = "Hi";</code></pre></details>
+
+      <details><summary>addEventListener</summary><p>Adds interaction handler.</p><pre><code>button.addEventListener("click", greet);</code></pre></details>
+
+      <details><summary>innerHTML</summary><p>Sets or gets HTML content.</p><pre><code>element.innerHTML = "<b>Hello</b>";</code></pre></details>
+
+      <details><summary>alert / console.log</summary><p>Display or log messages.</p><pre><code>alert("Hi");
+console.log("Hello");</code></pre></details>
+
+      <details><summary>Math.random / Math.floor</summary><p>Generate random numbers.</p><pre><code>let num = Math.floor(Math.random() * 10);</code></pre></details>
+
+      <details><summary>Array.push / Array.pop</summary><p>Add/remove elements from array.</p><pre><code>arr.push("item");
+arr.pop();</code></pre></details>
+
+      <details><summary>map / filter</summary><p>Transform and filter arrays.</p><pre><code>arr.map(x => x * 2);
+arr.filter(x => x > 5);</code></pre></details>
+
+      <details><summary>JSON.stringify / JSON.parse</summary><p>Convert between objects and JSON.</p><pre><code>let json = JSON.stringify(obj);
+let obj = JSON.parse(json);</code></pre></details>
+
+      <details><summary>setTimeout / setInterval</summary><p>Delays or repeats functions.</p><pre><code>setTimeout(greet, 1000);
+setInterval(greet, 2000);</code></pre></details>
+
+      <details><summary>try / catch</summary><p>Handle runtime errors.</p><pre><code>try {
+  callThatMightFail();
+} catch (e) {
+  console.log(e);
+}</code></pre></details>
+
+      <details><summary>fetch</summary><p>Request data from APIs.</p><pre><code>fetch("https://api.example.com")
+  .then(res => res.json())
+  .then(data => console.log(data));</code></pre></details>
+    </section>
+  </main>
+
+  <!-- Link to shared script that powers the dark mode toggle -->
+  <script src="script.js" defer></script>
+</body>
+</html>

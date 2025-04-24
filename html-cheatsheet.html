@@ -1,0 +1,206 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML5 -->
+<!-- I used https://www.w3schools.com/tags/tag_doctype.asp for this section -->
+
+<html lang="en"> <!-- Root element of the HTML document -->
+<!-- I used https://www.w3schools.com/tags/tag_html.asp for this section -->
+
+<head> <!-- Contains metadata for the document -->
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
+  <!-- I used https://www.w3schools.com/tags/tag_meta.asp for this section -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes website responsive on mobile devices -->
+  <!-- I used https://www.w3schools.com/tags/tag_meta.asp for this section -->
+
+  <title>HTML Cheat Sheet</title> <!-- Sets the browser tab title -->
+  <!-- I used https://www.w3schools.com/tags/tag_title.asp for this section -->
+
+  <link rel="stylesheet" href="styles.css" /> <!-- Links an external CSS file -->
+  <!-- I used https://www.w3schools.com/tags/tag_link.asp for this section -->
+
+  <!-- Inline CSS styling -->
+  <style>
+    /* Styling for collapsible <details> blocks */
+    details {
+      margin-bottom: 15px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    details[open] {
+      background: #e0eafc;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    /* Dark Mode Styling */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    body.dark-mode details {
+      background: #1e1e1e;
+      color: #ddd;
+    }
+
+    body.dark-mode details[open] {
+      background: #2a2a2a;
+    }
+
+    body.dark-mode pre {
+      background: #000;
+      color: #0f0;
+    }
+  </style>
+  <!-- I used https://www.w3schools.com/tags/tag_style.asp and https://www.w3schools.com/css/ for this section -->
+</head>
+
+<body> <!-- Main content of the webpage -->
+<!-- I used https://www.w3schools.com/tags/tag_body.asp for this section -->
+
+  <nav class="navbar"> <!-- Navigation links at the top -->
+    <!-- I used https://www.w3schools.com/tags/tag_nav.asp for this section -->
+    <a href="index.html">Home</a> <!-- Link to home page -->
+    <a href="resume.html">Resume</a> <!-- Link to resume page -->
+    <a href="html-cheatsheet.html" class="active">HTML Cheat Sheet</a> <!-- Highlighted as current page -->
+    <a href="css-cheatsheet.html">CSS Cheat Sheet</a> <!-- Link to CSS page -->
+    <a href="js-cheatsheet.html">JavaScript Cheat Sheet</a> <!-- Link to JavaScript page -->
+    <!-- I used https://www.w3schools.com/tags/tag_a.asp for anchor tags -->
+  </nav>
+
+  <main class="cheatsheet"> <!-- Primary section for cheat sheet -->
+    <!-- I used https://www.w3schools.com/tags/tag_main.asp for this section -->
+
+    <section>
+      <h1>HTML Cheat Sheet</h1>
+      <p>This page shows the most useful HTML tags in beginner-friendly terms.</p>
+
+      <!-- Collapsible content -->
+      <details>
+        <summary>&lt;!DOCTYPE&gt;</summary>
+        <p>Tells the browser this page uses HTML5.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;html&gt;</summary>
+        <p>Wraps the entire webpage content.</p>
+        <pre><code>&lt;html lang="en"&gt;
+  ...your page content...
+&lt;/html&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;head&gt;</summary>
+        <p>Contains settings like the title and CSS links.</p>
+        <pre><code>&lt;head&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;meta&gt;</summary>
+        <p>Defines information like character encoding.</p>
+        <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;title&gt;</summary>
+        <p>Sets the page title (shown in the browser tab).</p>
+        <pre><code>&lt;title&gt;Welcome Page&lt;/title&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;body&gt;</summary>
+        <p>This is where all the content goes.</p>
+        <pre><code>&lt;body&gt;
+  Hello, world!
+&lt;/body&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;h1&gt; to &lt;h6&gt;</summary>
+        <p>Heading levels — h1 is largest, h6 is smallest.</p>
+        <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;p&gt; – Paragraph</summary>
+        <p>Creates a block of text.</p>
+        <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;a&gt; – Link</summary>
+        <p>Creates a clickable hyperlink.</p>
+        <pre><code>&lt;a href="https://example.com"&gt;Visit Site&lt;/a&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;img&gt; – Image</summary>
+        <p>Displays an image.</p>
+        <pre><code>&lt;img src="image.jpg" alt="My photo" width="300"&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;br&gt; – Line Break</summary>
+        <p>Skips to a new line in text.</p>
+        <pre><code>First line&lt;br&gt;Second line</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;hr&gt; – Horizontal Line</summary>
+        <p>Adds a horizontal line across the page.</p>
+        <pre><code>&lt;hr&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;strong&gt; and &lt;em&gt;</summary>
+        <p>Makes text bold or italic.</p>
+        <pre><code>&lt;strong&gt;Important!&lt;/strong&gt;
+&lt;em&gt;Emphasized text&lt;/em&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; – Lists</summary>
+        <p>ul = bullet list, ol = numbered list, li = each item.</p>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </details>
+
+      <details>
+        <summary>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</summary>
+        <p>Creates a table of information.</p>
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alex&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      </details>
+    </section>
+  </main>
+
+  <!-- Link the dark mode toggle script -->
+  <script src="script.js" defer></script>
+</body>
+</html>

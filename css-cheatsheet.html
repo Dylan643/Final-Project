@@ -1,0 +1,106 @@
+<!DOCTYPE html> <!-- Declares the document as HTML5 -->
+<!-- I used https://www.w3schools.com/tags/tag_doctype.asp for this section -->
+
+<html lang="en"> <!-- Root HTML element with language set to English -->
+<!-- I used https://www.w3schools.com/tags/tag_html.asp for this section -->
+
+<head> <!-- Contains metadata and resource links -->
+  <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+  <!-- I used https://www.w3schools.com/tags/tag_meta.asp for this section -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures mobile responsiveness -->
+  <!-- I used https://www.w3schools.com/tags/tag_meta.asp for this section -->
+
+  <title>CSS Cheat Sheet</title> <!-- Browser tab title -->
+  <!-- I used https://www.w3schools.com/tags/tag_title.asp for this section -->
+
+  <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+  <!-- I used https://www.w3schools.com/tags/tag_link.asp for this section -->
+
+  <style>
+    /* Inline CSS for cheat sheet appearance */
+    details {
+      margin-bottom: 15px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    details[open] {
+      background: #e0eafc;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode details {
+      background: #2e2e2e;
+    }
+
+    .dark-mode details[open] {
+      background: #444;
+    }
+
+    .dark-mode pre {
+      background: #111;
+      color: #9f9;
+    }
+  </style>
+</head>
+
+<body> <!-- Content that appears in the browser -->
+<!-- I used https://www.w3schools.com/tags/tag_body.asp for this section -->
+
+  <nav class="navbar"> <!-- Navigation menu -->
+    <!-- I used https://www.w3schools.com/tags/tag_nav.asp for this section -->
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="html-cheatsheet.html">HTML Cheat Sheet</a>
+    <a href="css-cheatsheet.html" class="active">CSS Cheat Sheet</a>
+    <a href="js-cheatsheet.html">JavaScript Cheat Sheet</a>
+  </nav>
+
+  <main class="cheatsheet"> <!-- Main content container -->
+    <section>
+      <h1>CSS Cheat Sheet</h1>
+      <p>This page shows the most useful CSS tags in beginner-friendly terms.</p>
+
+      <details><summary>color</summary><p>Sets the text color.</p><pre><code>color: red;</code></pre></details>
+      <details><summary>background-color</summary><p>Sets the background color.</p><pre><code>background-color: lightblue;</code></pre></details>
+      <details><summary>font-family</summary><p>Defines the font style.</p><pre><code>font-family: 'Arial', sans-serif;</code></pre></details>
+      <details><summary>font-size</summary><p>Sets the size of the text.</p><pre><code>font-size: 16px;</code></pre></details>
+      <details><summary>margin</summary><p>Sets the outer space of an element.</p><pre><code>margin: 20px;</code></pre></details>
+      <details><summary>padding</summary><p>Sets the inner space of an element.</p><pre><code>padding: 10px;</code></pre></details>
+      <details><summary>border</summary><p>Defines border around elements.</p><pre><code>border: 1px solid black;</code></pre></details>
+      <details><summary>display</summary><p>Specifies layout (block, inline, flex, etc.).</p><pre><code>display: flex;</code></pre></details>
+      <details><summary>flex</summary><p>Specifies the flex properties of a flex item.</p><pre><code>flex: 1;</code></pre></details>
+      <details><summary>position</summary><p>Specifies element position method.</p><pre><code>position: relative;</code></pre></details>
+      <details><summary>z-index</summary><p>Sets stack order of elements.</p><pre><code>z-index: 10;</code></pre></details>
+      <details><summary>animation</summary><p>Defines animation effects.</p><pre><code>animation: fadeIn 1s ease-in;</code></pre></details>
+      <details><summary>transition</summary><p>Specifies transition effects.</p><pre><code>transition: all 0.3s ease;</code></pre></details>
+      <details><summary>text-align</summary><p>Aligns the text horizontally.</p><pre><code>text-align: center;</code></pre></details>
+      <details><summary>box-shadow</summary><p>Adds a shadow to the element box.</p><pre><code>box-shadow: 0 4px 6px rgba(0,0,0,0.1);</code></pre></details>
+    </section>
+  </main>
+
+  <!-- Dark Mode Toggle Script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
